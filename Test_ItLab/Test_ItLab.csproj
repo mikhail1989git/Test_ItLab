@@ -115,6 +115,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Components\Documents\document1.pdf" />
+    <None Include="Components\Documents\document2.pdf" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -123,8 +125,25 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Documents\" />
+    <Resource Include="Components\Images\Page1\BG1.jpg" />
+    <Resource Include="Components\Images\Page2\Group1.png" />
+    <Resource Include="Components\Images\Page2\Group2.png" />
+    <Resource Include="Components\Images\Page2\Rectangle4.png" />
+    <Resource Include="Components\Images\Page2\Rectangle5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Components\Images\Page4\Group1.png" />
+    <Resource Include="Components\Images\Page4\Group2.png" />
+    <Resource Include="Components\Images\Page4\Rectangle4.png" />
+    <Resource Include="Components\Images\Page4\Rectangle5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Components\Images\Page3\Group1.png" />
+    <Resource Include="Components\Images\Page3\Group2.png" />
+    <Resource Include="Components\Images\Page3\Rectangle4.png" />
+    <Resource Include="Components\Images\Page3\Rectangle5.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

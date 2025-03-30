@@ -25,10 +25,8 @@ namespace Test_ItLab
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            _viewModel.VerifyCode();
-            //_viewModel.NavigateToPage4();
-        }
+        private void Button_Click(object sender, RoutedEventArgs e) => _viewModel.VerifyCode();
+        private void OpenPdf1_Click(object sender, RoutedEventArgs e) => _viewModel.OpenPdf("../Documents/document1.pdf");
+        private void OpenPdf2_Click(object sender, RoutedEventArgs e) => _viewModel.OpenPdf("../Documents/document2.pdf");
     }
 }

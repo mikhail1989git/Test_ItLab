@@ -1,20 +1,52 @@
 ﻿<Page x:Class="Test_ItLab.Page3"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <Grid>
-        <Image Source="../Assets/BG3.jpg" Stretch="Fill"/>
 
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-            <StackPanel Orientation="Horizontal">
-                <TextBox x:Name="Box1" Text="{Binding Code1}" Width="50" Margin="5" MaxLength="1" TextChanged="Box_TextChanged"/>
-                <TextBox x:Name="Box2" Text="{Binding Code2}" Width="50" Margin="5" MaxLength="1" TextChanged="Box_TextChanged"/>
-                <TextBox x:Name="Box3" Text="{Binding Code3}" Width="50" Margin="5" MaxLength="1" TextChanged="Box_TextChanged"/>
+    <Grid Background="Pink">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="Box1" Text="{Binding Code1}" Width="50" Margin="5" MaxLength="1" TextChanged="Box_TextChanged"/>
+                    <TextBox x:Name="Box2" Text="{Binding Code2}" Width="50" Margin="5" MaxLength="1" TextChanged="Box_TextChanged"/>
+                    <TextBox x:Name="Box3" Text="{Binding Code3}" Width="50" Margin="5" MaxLength="1" TextChanged="Box_TextChanged"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,20">
+                    <Button Content="Подтвердить номер" Click="Button_Click" Margin="10"/>
+                    <Button Content="Прислать номер повторно" Margin="10"/>
+                </StackPanel>
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal" Margin="0,20">
-                <Button Content="Подтвердить номер" Click="Button_Click" Margin="10"/>
-                <Button Content="Прислать номер повторно" Margin="10"/>
-            </StackPanel>
-        </StackPanel>
+            <Image Grid.Column="1" Source="/Components/Images/Page4/Rectangle5.png" Stretch="UniformToFill" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <Image Grid.Column="2" Source="/Components/Images/Page4/Rectangle4.png" Stretch="UniformToFill" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Image Grid.Row="0" Source="/Components/Images/Page2/Group1.png" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Button Grid.Row="2" Content="Посмотреть PDF" Click="OpenPdf1_Click" Background="{x:Null}" BorderBrush="#FFFFAF00" FontFamily="Arial Black" Margin="50" Foreground="#FFFFAF00" FontWeight="Bold"/>
+            </Grid>
+
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="4*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Image Grid.Row="0" Source="/Components/Images/Page2/Group2.png" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                <Button Grid.Row="2" Content="Посмотреть PDF 2" Click="OpenPdf2_Click" Background="{x:Null}" BorderBrush="#FFFFAF00" FontFamily="Arial Black" Margin="50" Foreground="#FFFFAF00" FontWeight="Bold"/>
+            </Grid>
+        </Grid>
     </Grid>
 </Page>

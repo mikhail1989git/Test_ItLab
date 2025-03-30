@@ -21,10 +21,12 @@ public class MainViewModel : ViewModelBase
         }
     }
 
+    //Page2
     public string FullName { get; set; }
     public string Phone { get; set; }
     public string Email { get; set; }
 
+    //Page3
     public string Code1 { get; set; }
     public string Code2 { get; set; }
     public string Code3 { get; set; }
@@ -55,7 +57,7 @@ public class MainViewModel : ViewModelBase
         StartTimer();
     }
 
-    private void StartTimer()
+    private void StartTimer() //TODO Сделать асинхронным, переиминовать, переписать чтоб принимал делегат на Navigate
     {
         _timer = new Timer(20000);
         _timer.Elapsed += (s, e) =>
@@ -66,16 +68,19 @@ public class MainViewModel : ViewModelBase
         _timer.Start();
     }
 
-    public void OpenPdf(string fileName)
+    public void OpenPdf(string fileName)    //TODO Сделать асинхронным
     {
         string path = Path.Combine(Directory.GetCurrentDirectory(), "Documents", fileName);
         if (File.Exists(path))
         {
+            MessageBox.Show("exist");
             Process.Start(new ProcessStartInfo(path) { UseShellExecute = true });
         }
+
+        MessageBox.Show("not exist");
     }
 
-    public void VerifyCode()
+    public void VerifyCode() //TODO Сделать асинхронным
     {
         if (Code1 == "0" && Code2 == "0" && Code3 == "0")
         {
@@ -84,7 +89,6 @@ public class MainViewModel : ViewModelBase
         else
         {
             MessageBox.Show("Неверный код. Попробуйте снова."); //TODO при неверной попытке, обнулить поля, перевести курсор на первое поле.
-            //NavigateToPage3();
         }
     }
 }

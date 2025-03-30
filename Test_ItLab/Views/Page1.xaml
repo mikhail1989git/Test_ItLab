@@ -1,8 +1,10 @@
 ﻿<Page x:Class="Test_ItLab.Page1"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <Grid>
-        <Image Source="../Assets/BG1.jpg" Stretch="Fill"/>
-        <Button Background="Transparent" Click="Button_Click"/>
+
+    <Grid Background="Black">
+        <Image Source="/Components/Images/Page1/BG1.jpg" Stretch="UniformToFill" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        
+        <Button Background="Transparent" Opacity="0" Click="Button_Click"/>
     </Grid>
 </Page>
