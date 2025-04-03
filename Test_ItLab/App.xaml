@@ -59,10 +59,10 @@
         
         <!--Оранжевая кнопка-->
         <Style x:Key="OrangeButtonStyle" TargetType="{x:Type Button}">
-            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="Background" Value="#FFFFAF00"/>
             <Setter Property="BorderBrush" Value="#FFFFAF00"/>
             <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="Foreground" Value="#FFFFAF00"/>
+            <Setter Property="Foreground" Value="#121212"/>
             <Setter Property="FontFamily" Value="Arial Black"/>
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="Padding" Value="15"/>
@@ -149,6 +149,19 @@
                     </LinearGradientBrush>
                 </Setter.Value>
             </Setter>
+        </Style>
+
+        <!--Текстбоксы СМС-->
+        <Style x:Key="SmsTextBoxStyle" TargetType="{x:Type TextBox}">
+            <Setter Property="Foreground" Value="#FFFFAF00"/>
+            <Setter Property="Background" Value="#FF3C3C3C"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Height" Value="150"/>
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="FontSize" Value="80"/>
+            <Setter Property="MaxLength" Value="1"/>
+            <Setter Property="TextAlignment" Value="Center"/>
         </Style>
 
         <!--Текстблоки-->

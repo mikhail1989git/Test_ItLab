@@ -57,7 +57,7 @@ public class MainViewModel : ViewModelBase
         StartTimer();
     }
 
-    private void StartTimer() //TODO Сделать асинхронным, переиминовать, переписать чтоб принимал делегат на Navigate
+    private void StartTimer()
     {
         _timer = new Timer(20000);
         _timer.Elapsed += (s, e) =>
@@ -82,7 +82,7 @@ public class MainViewModel : ViewModelBase
         }
     }
 
-    public void VerifyCode() //TODO Сделать асинхронным
+    public void VerifyCode()
     {
         if (Code1 == "0" && Code2 == "0" && Code3 == "0")
         {
@@ -90,7 +90,7 @@ public class MainViewModel : ViewModelBase
         }
         else
         {
-            MessageBox.Show("Неверный код. Попробуйте снова."); //TODO при неверной попытке, обнулить поля, перевести курсор на первое поле.
+            MessageBox.Show("Неверный код. Попробуйте снова.");
         }
     }
 }

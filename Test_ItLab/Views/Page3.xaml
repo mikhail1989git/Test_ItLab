@@ -2,51 +2,49 @@
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <Grid Background="Pink">
-        <Grid>
+    <Grid Background="#121212">
+
+        <Grid Cursor="">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="4*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <StackPanel Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center">
-                <StackPanel Orientation="Horizontal">
-                    <TextBox x:Name="Box1" Text="{Binding Code1}" Width="50" Margin="5" MaxLength="1" TextChanged="Box_TextChanged"/>
-                    <TextBox x:Name="Box2" Text="{Binding Code2}" Width="50" Margin="5" MaxLength="1" TextChanged="Box_TextChanged"/>
-                    <TextBox x:Name="Box3" Text="{Binding Code3}" Width="50" Margin="5" MaxLength="1" TextChanged="Box_TextChanged"/>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+
+
+
+
+
+            <StackPanel Grid.Column="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Vertical" Margin="50">
+                <Image Source="/Components/Images/Page3/Frame6.png" Stretch="UniformToFill" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <TextBox Style="{StaticResource SmsTextBoxStyle}" x:Name="Box1" Text="{Binding Code1}" TextChanged="Box_TextChanged"/>
+                    <TextBox Style="{StaticResource SmsTextBoxStyle}" x:Name="Box2" Text="{Binding Code2}" TextChanged="Box_TextChanged"/>
+                    <TextBox Style="{StaticResource SmsTextBoxStyle}" x:Name="Box3" Text="{Binding Code3}" TextChanged="Box_TextChanged"/>
                 </StackPanel>
 
-                <StackPanel Orientation="Horizontal" Margin="0,20">
-                    <Button Content="Подтвердить номер" Click="Button_Click" Margin="10"/>
-                    <Button Content="Прислать номер повторно" Margin="10"/>
-                </StackPanel>
+                <Button Style="{StaticResource OrangeButtonStyle}" Content="Подтвердить номер" Click="Button_Click" />
+                <Button Style="{StaticResource OrangeButtonStyle}" Content="Прислать номер повторно" Margin="10" Foreground="#7D7D7D" Background="Transparent" BorderBrush="Transparent" />
             </StackPanel>
 
-            <Image Grid.Column="1" Source="/Components/Images/Page4/Rectangle5.png" Stretch="UniformToFill" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-            <Image Grid.Column="2" Source="/Components/Images/Page4/Rectangle4.png" Stretch="UniformToFill" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <Image Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" Source="/Components/Images/Page3/Rectangle5.png" Stretch="UniformToFill" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <Image Grid.Column="2" Grid.Row="0" Grid.RowSpan="3" Source="/Components/Images/Page3/Rectangle4.png" Stretch="UniformToFill" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 
-            <Grid Grid.Column="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="4*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
 
-                <Image Grid.Row="0" Source="/Components/Images/Page2/Group1.png" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                <Button Grid.Row="2" Content="Посмотреть PDF" Click="OpenPdf1_Click" Background="{x:Null}" BorderBrush="#FFFFAF00" FontFamily="Arial Black" Margin="50" Foreground="#FFFFAF00" FontWeight="Bold"/>
-            </Grid>
 
-            <Grid Grid.Column="2">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="4*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
+            <Image Grid.Column="1" Grid.Row="0" Source="/Components/Images/Page3/Group1.png" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <Button Grid.Column="1" Grid.Row="2" Content="Посмотреть PDF" Click="OpenPdf1_Click" Background="{x:Null}" BorderBrush="#FFFFAF00" FontFamily="Arial Black" Margin="50" Foreground="#FFFFAF00" FontWeight="Bold"/>
 
-                <Image Grid.Row="0" Source="/Components/Images/Page2/Group2.png" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center" />
-                <Button Grid.Row="2" Content="Посмотреть PDF 2" Click="OpenPdf2_Click" Background="{x:Null}" BorderBrush="#FFFFAF00" FontFamily="Arial Black" Margin="50" Foreground="#FFFFAF00" FontWeight="Bold"/>
-            </Grid>
+            <Image Grid.Column="2" Grid.Row="0" Source="/Components/Images/Page3/Group2.png" Stretch="Uniform" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <Button Grid.Column="2" Grid.Row="2" Content="Посмотреть PDF 2" Click="OpenPdf2_Click" Background="{x:Null}" BorderBrush="#FFFFAF00" FontFamily="Arial Black" Margin="50" Foreground="#FFFFAF00" FontWeight="Bold"/>
+
         </Grid>
     </Grid>
 </Page>

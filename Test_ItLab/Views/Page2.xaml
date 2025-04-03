@@ -43,7 +43,7 @@
 
                 <TextBlock Style="{StaticResource CustomTextBlockSmallText}" Text="Я даю согласие на обработку персональных данных и соглашаюсь с политикой конфиденциальности."/>
 
-                <Button Style="{StaticResource OrangeButtonStyle}" Content="Подтвердить данные" Command="{Binding SubmitCommand}" Click="Button_Click" HorizontalAlignment="Stretch"/>
+                <Button Style="{StaticResource OrangeButtonStyle}" Content="Подтвердить данные" Command="{Binding SubmitCommand}" Click="Button_Click" HorizontalAlignment="Stretch" Cursor="Hand"/>
             </StackPanel>
         </Grid>
     </Grid>
