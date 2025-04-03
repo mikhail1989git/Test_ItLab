@@ -14,7 +14,7 @@
             <Setter Property="FontFamily" Value="Arial Black"/>
             <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="Margin" Value="50"/>
-            <Setter Property="Padding" Value="10,5"/>
+            <Setter Property="Padding" Value="15"/>
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
             <Setter Property="Cursor" Value="Hand"/>
@@ -52,6 +52,42 @@
                                 <Setter TargetName="border" Property="Opacity" Value="0.5"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!--Черная кнопка, нет рамки-->
+        <Style x:Key="BlackButtonWhithoutBorderStyle" TargetType="{x:Type Button}">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Foreground" Value="#7D7D7D"/>
+            <Setter Property="FontFamily" Value="Arial Black"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Padding" Value="15"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Cursor" Value="Hand"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" 
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                CornerRadius="3"
+                SnapsToDevicePixels="True">
+                            <ContentPresenter x:Name="contentPresenter"
+                            Content="{TemplateBinding Content}"
+                            ContentTemplate="{TemplateBinding ContentTemplate}"
+                            Margin="{TemplateBinding Padding}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            RecognizesAccessKey="True"/>
+                        </Border>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
@@ -107,9 +143,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        
-        <!--Текстбоксы без градиента-->
-        
+                
         <!--Текстбоксы с градиентом-->
         <Style x:Key="CustomGradientTextBoxStyle" TargetType="{x:Type TextBox}">
             <Setter Property="Foreground" Value="#FFFFAF00"/>

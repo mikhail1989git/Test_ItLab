@@ -31,7 +31,7 @@
                 </StackPanel>
 
                 <Button Style="{StaticResource OrangeButtonStyle}" Content="Подтвердить номер" Click="Button_Click" />
-                <Button Style="{StaticResource OrangeButtonStyle}" Content="Прислать номер повторно" Margin="10" Foreground="#7D7D7D" Background="Transparent" BorderBrush="Transparent" />
+                <Button Style="{StaticResource BlackButtonWhithoutBorderStyle}" Content="Прислать номер повторно" />
             </StackPanel>
 
             <Image Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" Source="/Components/Images/Page3/Rectangle5.png" Stretch="UniformToFill" VerticalAlignment="Center" HorizontalAlignment="Center"/>
