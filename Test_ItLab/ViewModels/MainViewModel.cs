@@ -68,16 +68,18 @@ public class MainViewModel : ViewModelBase
         _timer.Start();
     }
 
-    public void OpenPdf(string fileName)    //TODO Сделать асинхронным
+    public void OpenPdf(string fileName)
     {
         string path = Path.Combine(Directory.GetCurrentDirectory(), "Documents", fileName);
+
         if (File.Exists(path))
         {
-            MessageBox.Show("exist");
             Process.Start(new ProcessStartInfo(path) { UseShellExecute = true });
         }
-
-        MessageBox.Show("not exist");
+        else
+        {
+            MessageBox.Show($"Файл находящийся по пути: {path} не обнаружен.");
+        }
     }
 
     public void VerifyCode() //TODO Сделать асинхронным

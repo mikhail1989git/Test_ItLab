@@ -125,9 +125,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Resource Include="Components\Images\Page1\BG1.jpg" />
+    <Resource Include="Components\Images\Page1\Group1.png" />
+    <Resource Include="Components\Images\Page1\Group2.png" />
+    <Resource Include="Components\Images\Page1\Vector.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Resource Include="Components\Images\Page2\Group1.png" />
     <Resource Include="Components\Images\Page2\Group2.png" />
     <Resource Include="Components\Images\Page2\Rectangle4.png" />
@@ -144,6 +147,13 @@
     <Resource Include="Components\Images\Page3\Group2.png" />
     <Resource Include="Components\Images\Page3\Rectangle4.png" />
     <Resource Include="Components\Images\Page3\Rectangle5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Components\Images\Page1\Frame11.png" />
+    <Resource Include="Components\Images\Page1\Group12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Components\Images\Page2\Frame6.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

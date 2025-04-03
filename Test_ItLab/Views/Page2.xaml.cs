@@ -14,8 +14,8 @@ namespace Test_ItLab
             DataContext = viewModel;
         }
 
-        private void OpenPdf1_Click(object sender, RoutedEventArgs e) => _viewModel.OpenPdf("../Documents/document1.pdf");
-        private void OpenPdf2_Click(object sender, RoutedEventArgs e) => _viewModel.OpenPdf("../Documents/document2.pdf");
+        private void OpenPdf1_Click(object sender, RoutedEventArgs e) => _viewModel.OpenPdf("/Components/Documents/document1.pdf");
+        private void OpenPdf2_Click(object sender, RoutedEventArgs e) => _viewModel.OpenPdf("/Components/Documents/document2.pdf");
         private void Submit_Click(object sender, RoutedEventArgs e) => _viewModel.NavigateToPage3();
 
         private void Button_Click(object sender, RoutedEventArgs e)
